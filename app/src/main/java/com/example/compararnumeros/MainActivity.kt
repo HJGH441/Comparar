@@ -46,10 +46,10 @@ class MainActivity : Activity(), View.OnClickListener {
                     .setPositiveButton("Si",
                         DialogInterface.OnClickListener{ dialogInterface, i ->
                             if (num1 == num2){
-                                Toast.makeText(this, "Los números son iguales", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this, "Ambos Numeros son Iguales", Toast.LENGTH_LONG).show()
                             } else {
                                 val mayor = comp.comparar(num1, num2)
-                                Toast.makeText(this, "Número mayor = $mayor", Toast.LENGTH_LONG).show()
+                                Toast.makeText(this, "El numero Mayor = $mayor", Toast.LENGTH_LONG).show()
                             }
                         }
                     )
@@ -65,7 +65,6 @@ class MainActivity : Activity(), View.OnClickListener {
 
     private fun iniciarVistas() {
         bnCompara = J.bnCompara
-        // Array Adapter
         val adapter = ArrayAdapter.createFromResource(
             this,
             R.array.misNumeros,
@@ -73,8 +72,6 @@ class MainActivity : Activity(), View.OnClickListener {
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        // Relacionar Spinner con nuestro adapter
         J.spNumUno.adapter = adapter
         J.spNumDos.adapter = adapter
     }
