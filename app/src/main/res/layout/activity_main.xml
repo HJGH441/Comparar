@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:background="#3989AE"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:layout_boxedEdges="all">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/comparar_numeros" />
+
+        <Button
+            android:id="@+id/bnCompara"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="@string/calcular"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9D3AA3" />
+
+        <Spinner
+            android:id="@+id/spNumUno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            />
+
+        <Spinner
+            android:id="@+id/spNumDos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            />
+
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>
